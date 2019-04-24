@@ -37,15 +37,14 @@ const person = {
 person.sayHey();
 
 // Principle 3 New Binding
-
-/*whenever a constructor function used the 'this' key word points to the obeject that being created using the 
+/*whenever a constructor function used the 'this' key word points to the obeject that being created using the
 constructore using 'new'*/
-
 // code example for New Binding
-
-const User = function(name) {
-    this.name = name;
-    this.Intro = function(property){console.log('My name is '+ this.name + ' I am '+ property)}
+class User {
+    constructor(name) {
+        this.name = name;
+        this.Intro = function (property) { console.log('My name is ' + this.name + ' I am ' + property); };
+    }
 }
 
 const newName = new User('Arsi');
